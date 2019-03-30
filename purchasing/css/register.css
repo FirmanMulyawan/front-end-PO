@@ -1,1 +1,4 @@
 #success_message{ display: none;}
+body {
+    background: -webkit-linear-gradient(bottom, #bb164a, #ff2e54, #bb164a);
+  }

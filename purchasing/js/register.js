@@ -48,17 +48,17 @@ $(document).ready(function () {
                     }
                 }
             },
-                position: {
-                    validators: {
-                        notEmpty: {
-                            message: 'Please select your Position'
-                        }
+            position: {
+                validators: {
+                    notEmpty: {
+                        message: 'Please select your Position'
                     }
-                },
-            }
+                }
+            },
+        }
     })
         .on('success.form.bv', function (e) {
-            $('#success_message').slideDown({ opacity: "show" }, "slow") // Do something ...
+            $('#success_message').slideDown({ opacity: "show" }, "slow")
             $('#contact_form').data('bootstrapValidator').resetForm();
 
             // Prevent form submission
@@ -102,7 +102,7 @@ function register() {
     console.log(email)
 
     $.ajax({
-        url: 'http://127.0.0.1:9500/addEmployee', 
+        url: 'http://127.0.0.1:9500/addEmployees',
         method: 'POST',
         contentType: 'application/json',
         data: JSON.stringify({
