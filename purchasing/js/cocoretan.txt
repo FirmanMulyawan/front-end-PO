@@ -1,0 +1,10 @@
+firstname v
+lastname v
+position -Employee
+	 -SCM Reviewer
+	 -Manager
+	 -Contract Owner Approver
+username v
+password v
+confirm password v
+email v

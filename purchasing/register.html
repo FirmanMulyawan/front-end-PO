@@ -8,7 +8,7 @@
   <link rel='stylesheet' href='http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css'>
   <link rel='stylesheet' href='http://cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.0/css/bootstrapValidator.min.css'>
   <link rel="stylesheet" href="css/register.css">
-  <link rel="icon" type="image/png" href="https://apps.odoo.com/apps/icon_image?module_id=39567">
+  <link rel="icon" type="image/png" href="https://dumielauxepices.net/sites/default/files/ecommerce-clipart-shopping-basket-593152-2687527.png">
   <title>PO | Register</title>
 </head>
 
@@ -29,51 +29,28 @@
         <!-- Text input-->
 
         <div class="form-group">
-          <label class="col-md-4 control-label">First Name</label>
+          <label class="col-md-4 control-label">Full Name</label>
           <div class="col-md-4 inputGroupContainer">
             <div class="input-group">
               <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-              <input name="first_name" placeholder="First Name" class="form-control" type="text">
+              <input name="fullname" id="fullname" placeholder="Full Name" class="form-control" type="text">
             </div>
           </div>
         </div>
 
         <!-- Text input-->
-
-        <div class="form-group">
-          <label class="col-md-4 control-label">Last Name</label>
-          <div class="col-md-4 inputGroupContainer">
-            <div class="input-group">
-              <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-              <input name="last_name" placeholder="Last Name" class="form-control" type="text">
-            </div>
-          </div>
-        </div>
-
         <div class="form-group">
           <label class="col-md-4 control-label">Position</label>
           <div class="col-md-4 selectContainer">
             <div class="input-group">
               <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
-              <select name="department" class="form-control selectpicker">
+              <select name="position" id="position" class="form-control selectpicker">
                 <option value="">Select your Position</option>
-                <option>Employee</option>
-                <option>SCM Reviewer</option>
-                <option>Manager</option>
-                <option>Contract Owner Approver</option>
+                <option value="employee">Employee</option>
+                <option value="scm_reviewer">SCM Reviewer</option>
+                <option value="manager">Manager</option>
+                <option value="contract_owner">Contract Owner Approver</option>
               </select>
-            </div>
-          </div>
-        </div>
-
-        <!-- Text input-->
-
-        <div class="form-group">
-          <label class="col-md-4 control-label">Username</label>
-          <div class="col-md-4 inputGroupContainer">
-            <div class="input-group">
-              <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-              <input name="user_name" placeholder="Username" class="form-control" type="text">
             </div>
           </div>
         </div>
@@ -85,7 +62,8 @@
           <div class="col-md-4 inputGroupContainer">
             <div class="input-group">
               <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-              <input name="user_password" placeholder="Password" class="form-control" type="password">
+              <input name="user_password" id="user_password" placeholder="Password" class="form-control" type="password"
+                onkeyup='check();' />
             </div>
           </div>
         </div>
@@ -97,9 +75,11 @@
           <div class="col-md-4 inputGroupContainer">
             <div class="input-group">
               <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-              <input name="confirm_password" placeholder="Confirm Password" class="form-control" type="password">
+              <input name="confirm_password" id="confirm_password" placeholder="Confirm Password" class="form-control"
+                type="password" onkeyup='check();' />
             </div>
           </div>
+          <span id='message'></span>
         </div>
 
         <!-- Text input-->
@@ -108,7 +88,7 @@
           <div class="col-md-4 inputGroupContainer">
             <div class="input-group">
               <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
-              <input name="email" placeholder="E-Mail Address" class="form-control" type="text">
+              <input name="email" id="email" placeholder="E-Mail Address" class="form-control" type="text">
             </div>
           </div>
         </div>
@@ -126,7 +106,8 @@
         <div class="form-group">
           <label class="col-md-4 control-label"></label>
           <div class="col-md-4"><br>
-            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<button type="submit" class="btn btn-warning">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspSUBMIT
+            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<button type="submit" class="btn btn-warning"
+              onclick="register()">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspSUBMIT
               <span class="glyphicon glyphicon-send"></span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</button>
           </div>
         </div>
