@@ -41,6 +41,20 @@
                     </label>
                     <input id="user-password" class="form-content" type="password" name="password" required />
                     <div class="form-border"></div>
+
+                    <label for="user-email" style="padding-top:13px">
+                        &nbsp;position
+                    </label>
+                    <select name="position" id="position" class="form-control selectpicker">
+                        <option value="">Select your Position</option>
+                        <option value="employee">Employee</option>
+                        <option value="scm_reviewer">SCM Reviewer</option>
+                        <option value="manager">Manager</option>
+                        <option value="contract_owner">Contract Owner Approver</option>
+                    </select>
+
+
+
                     <button id="submit-btn" type="submit" name="submit" onclick="login()" />LOGIN</button>
                     <a href="register.html" id="signup">Belum punya akun ?</a>
                 </form>
@@ -49,7 +63,8 @@
     </body>
 
     </html>
-
+    <script src="http://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+        crossorigin="anonymous"></script>
     <script src="js/login.js"></script>
 
 

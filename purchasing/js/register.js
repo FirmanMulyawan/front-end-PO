@@ -117,6 +117,7 @@ function register() {
         },
         error: function () {
             alert("anda gagal bergabung")
+            window.location.href = 'register.html'
         }
     })
 }
